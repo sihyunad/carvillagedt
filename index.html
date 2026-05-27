@@ -568,6 +568,10 @@
 <option value="cps">계약단가</option>
 </select>
 </div>
+<button class="flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold bg-white hover:bg-slate-50 text-slate-700 rounded-lg border border-[#e8e8d1] shadow-sm transition-all shrink-0" onclick="downloadCompareTableExcel()">
+<i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+<span class="hidden sm:inline">비교표 엑셀</span> 다운로드
+</button>
 </div>
 </div>
 <div class="p-6 space-y-6">
@@ -977,7 +981,9 @@
             compareChart: null,
             compareMonthA: '',
             compareMonthB: '',
-            compareMetric: 'dbCount'
+            compareMetric: 'dbCount',
+            compareRowsCache: [],
+            compareMonthsCache: []
         };
 
         const $ = (id) => document.getElementById(id);
@@ -2140,15 +2146,18 @@
             });
         }
 
-        function renderCurrentTable() {
+        function getSortedPerformanceRows() {
             const data = filteredTableRows();
-            const sorted = [...data].sort((a, b) => {
+            return [...data].sort((a, b) => {
                 const av = a[state.currentSortColumn];
                 const bv = b[state.currentSortColumn];
                 if (typeof av === 'string') return state.currentSortDirection === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
                 return state.currentSortDirection === 'asc' ? av - bv : bv - av;
             });
-            renderTable(sorted);
+        }
+
+        function renderCurrentTable() {
+            renderTable(getSortedPerformanceRows());
         }
 
         function renderTable(rows) {
@@ -2278,6 +2287,8 @@
             if (!tbody) return;
 
             if (!months.length) {
+                state.compareRowsCache = [];
+                state.compareMonthsCache = [];
                 tbody.innerHTML = `<tr><td colspan="9" class="px-6 py-10 text-center text-slate-400">비교할 연월 데이터가 없습니다.</td></tr>`;
                 clearCompareSummaries();
                 updateCompareTypeSummary([]);
@@ -2289,12 +2300,15 @@
             state.compareMonthB = b;
             state.compareMetric = $('compareMetric')?.value || state.compareMetric || 'dbCount';
 
+            const orderedMonths = [a, b].filter(Boolean);
             const { details } = compileAggregatedData({ monthOverride: months });
             const rows = summarizeComparisonRows(details, months);
-            renderCompareTable(rows, [a, b].filter(Boolean));
+            state.compareRowsCache = rows;
+            state.compareMonthsCache = orderedMonths;
+            renderCompareTable(rows, orderedMonths);
             updateCompareTypeSummary(rows);
             updateCompareSummaries(rows, a, b);
-            updateCompareChart(rows, [a, b].filter(Boolean));
+            updateCompareChart(rows, orderedMonths);
         }
 
         function renderCompareTable(rows, orderedMonths) {
@@ -2634,21 +2648,97 @@
             });
         }
 
+        function buildWorkbookSheet(sheetName, headers, rows) {
+            const ws = XLSX.utils.aoa_to_sheet([headers, ...rows]);
+            ws['!cols'] = headers.map((header, idx) => ({
+                wch: Math.max(
+                    String(header).length + 4,
+                    ...rows.slice(0, 200).map((row) => String(row[idx] ?? '').length + 2)
+                )
+            }));
+            const lastRow = Math.max(rows.length, 1);
+            ws['!autofilter'] = { ref: XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: lastRow, c: headers.length - 1 } }) };
+            return ws;
+        }
+
+        function writeTableWorkbook(filename, sheetName, headers, rows) {
+            if (!rows.length) {
+                alert('다운로드할 데이터가 없습니다. 필터 조건을 확인해 주세요.');
+                return;
+            }
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, buildWorkbookSheet(sheetName, headers, rows), sheetName);
+            XLSX.writeFile(wb, filename);
+        }
+
         function downloadTableCSV() {
-            const rows = filteredTableRows();
-            const lines = ['날짜 (연월),광고 매체사,사이트,소재명 (광고 이름),타입,총 광고비,클릭수,유효 DB수,계약 수량,DB 단가 (CPA),계약 단가 (CPS)'];
-            rows.forEach((row) => {
-                const cells = [row.monthLabel || '-', row.agency, row.site, row.adName, normalizeCreativeGroup(row.creativeGroup, row.adName), row.spend, row.clicks, row.dbCount, row.contracts, row.cpa, row.cps];
-                lines.push(cells.map((cell) => `"${String(cell).replace(/"/g, '""')}"`).join(','));
+            const rows = getSortedPerformanceRows();
+            const headers = ['날짜 (연월)', '광고 매체사', '사이트', '소재명 (광고 이름)', '타입', '총 광고비', '클릭수', '유효 DB수', '계약 수량', 'DB 단가 (CPA)', '계약 단가 (CPS)'];
+            const excelRows = rows.map((row) => [
+                row.monthLabel || fullMonthLabel(row.month) || '-',
+                row.agency,
+                row.site,
+                row.adName,
+                normalizeCreativeGroup(row.creativeGroup, row.adName),
+                Number(row.spend || 0),
+                Number(row.clicks || 0),
+                Number(row.dbCount || 0),
+                Number(row.contracts || 0),
+                Number(row.cpa || 0),
+                Number(row.cps || 0)
+            ]);
+            writeTableWorkbook(
+                `소재명_키워드_매칭별_종합성과_${new Date().toISOString().slice(0, 10)}.xlsx`,
+                '종합성과목록',
+                headers,
+                excelRows
+            );
+        }
+
+        function getCurrentCompareRowsForDownload() {
+            const a = $('compareMonthA')?.value || state.compareMonthA;
+            const b = $('compareMonthB')?.value || state.compareMonthB;
+            const orderedMonths = [...new Set([a, b].filter(Boolean))];
+            if (!orderedMonths.length) return { rows: [], orderedMonths: [] };
+
+            const cachedMonths = state.compareMonthsCache || [];
+            const cacheMatches = cachedMonths.length === orderedMonths.length && cachedMonths.every((month, idx) => month === orderedMonths[idx]);
+            const rows = cacheMatches && Array.isArray(state.compareRowsCache)
+                ? [...state.compareRowsCache]
+                : summarizeComparisonRows(compileAggregatedData({ monthOverride: orderedMonths }).details, orderedMonths);
+
+            const monthOrder = new Map(orderedMonths.map((month, idx) => [month, idx]));
+            rows.sort((a, b) => {
+                const monthDiff = (monthOrder.get(a.month) ?? 999) - (monthOrder.get(b.month) ?? 999);
+                if (monthDiff) return monthDiff;
+                return `${a.agency}${a.site}${normalizeCreativeGroup(a.creativeGroup, a.adName)}`
+                    .localeCompare(`${b.agency}${b.site}${normalizeCreativeGroup(b.creativeGroup, b.adName)}`);
             });
-            const blob = new Blob(['\uFEFF' + lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = `광고소재_분석보고서_${new Date().toISOString().slice(0, 10)}.csv`;
-            document.body.appendChild(link);
-            link.click();
-            URL.revokeObjectURL(link.href);
-            link.remove();
+            return { rows, orderedMonths };
+        }
+
+        function downloadCompareTableExcel() {
+            const { rows, orderedMonths } = getCurrentCompareRowsForDownload();
+            const headers = ['비교 연월', '광고 매체사', '사이트', '타입', '총 광고비', '클릭수', 'DB수', '계약수', 'DB단가', '계약단가'];
+            const excelRows = rows.map((row) => [
+                fullMonthLabel(row.month) || row.month || '-',
+                agencyKoreanLabel(row.agency),
+                row.site,
+                normalizeCreativeGroup(row.creativeGroup, row.adName),
+                Number(row.spend || 0),
+                Number(row.clicks || 0),
+                Number(row.dbCount || 0),
+                Number(row.contracts || 0),
+                Number(row.cpa || 0),
+                Number(row.cps || 0)
+            ]);
+            const monthSuffix = orderedMonths.length ? `_${orderedMonths.join('_vs_')}` : '';
+            writeTableWorkbook(
+                `월별_성과_비교${monthSuffix}_${new Date().toISOString().slice(0, 10)}.xlsx`,
+                '월별성과비교',
+                headers,
+                excelRows
+            );
         }
 
         function downloadExcelTemplate() {
