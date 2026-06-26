@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>카빌리지 상세페이지 미리보기 | PC · Mobile</title>
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>카빌리지 상세페이지 미리보기 | PC · Mobile</title>
+<link as="style" crossorigin="" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet"/>
+<style>
     :root {
       --tab-blue: #1268e8;
       --tab-navy: #101828;
@@ -49,14 +50,14 @@
       color: var(--tab-blue);
       font-size: 13px;
       line-height: 1.2;
-      font-weight: 900;
+      font-weight: 700;
     }
     .preview-title {
       margin: 0;
       color: var(--tab-navy);
       font-size: 19px;
       line-height: 1.25;
-      font-weight: 900;
+      font-weight: 700;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -80,7 +81,7 @@
       color: var(--tab-sub);
       font: inherit;
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 700;
       cursor: pointer;
       transition: background 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
     }
@@ -168,25 +169,24 @@
   </style>
 </head>
 <body>
-  <div class="preview-shell">
-    <header class="preview-header">
-      <div class="preview-header-inner">
-        <div class="preview-title-wrap">
-          <p class="preview-kicker">공유용 미리보기</p>
-          <h1 class="preview-title">카빌리지 상세페이지 PC / 모바일 버전 전환</h1>
-        </div>
-        <div class="preview-tabs" role="tablist" aria-label="미리보기 버전 선택">
-          <button class="preview-tab" id="tab-pc" type="button" role="tab" aria-selected="true" aria-controls="panel-pc" data-target="pc">PC 버전</button>
-          <button class="preview-tab" id="tab-mobile" type="button" role="tab" aria-selected="false" aria-controls="panel-mobile" data-target="mobile">모바일 버전</button>
-        </div>
-      </div>
-    </header>
-
-    <main class="preview-body">
-      <section class="preview-panel is-active" id="panel-pc" role="tabpanel" aria-labelledby="tab-pc" data-panel="pc">
-        <div class="device-info"><span><strong>PC 버전</strong> - 브라우저 전체 폭 기준 미리보기</span><span>탭으로 모바일 버전과 전환</span></div>
-        <div class="desktop-frame-wrap">
-          <iframe class="desktop-frame" title="PC 버전 미리보기" srcdoc="&lt;!doctype html&gt;
+<div class="preview-shell">
+<header class="preview-header">
+<div class="preview-header-inner">
+<div class="preview-title-wrap">
+<p class="preview-kicker">공유용 미리보기</p>
+<h1 class="preview-title">카빌리지 상세페이지 PC / 모바일 버전 전환</h1>
+</div>
+<div aria-label="미리보기 버전 선택" class="preview-tabs" role="tablist">
+<button aria-controls="panel-pc" aria-selected="true" class="preview-tab" data-target="pc" id="tab-pc" role="tab" type="button">PC 버전</button>
+<button aria-controls="panel-mobile" aria-selected="false" class="preview-tab" data-target="mobile" id="tab-mobile" role="tab" type="button">모바일 버전</button>
+</div>
+</div>
+</header>
+<main class="preview-body">
+<section aria-labelledby="tab-pc" class="preview-panel is-active" data-panel="pc" id="panel-pc" role="tabpanel">
+<div class="device-info"><span><strong>PC 버전</strong> - 브라우저 전체 폭 기준 미리보기</span><span>탭으로 모바일 버전과 전환</span></div>
+<div class="desktop-frame-wrap">
+<iframe class="desktop-frame" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;ko&quot;&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;utf-8&quot; /&gt;
@@ -342,7 +342,7 @@
       align-items: center;
       justify-content: center;
       font-size: 12px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .vehicle-top-info {
@@ -366,13 +366,13 @@
       gap: 12px;
       color: var(--cv-navy);
       font-size: 30px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .vehicle-brand-line span {
       color: var(--cv-blue);
       font-size: 17px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .vehicle-spec-line {
@@ -417,7 +417,7 @@
       background: transparent;
       color: var(--cv-subtext);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .view-tab.is-active {
@@ -464,7 +464,7 @@
       background: transparent;
       color: var(--cv-subtext);
       font-size: 15px;
-      font-weight: 800;
+      font-weight: 700;
       padding: 0 0 8px;
     }
 
@@ -545,7 +545,7 @@
       background: linear-gradient(90deg, #0b74df, #263fbf);
       color: #fff;
       font-size: 17px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .estimate-content {
@@ -602,7 +602,7 @@
       background: #fff;
       color: var(--cv-text);
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .option-tab.is-active {
@@ -619,7 +619,7 @@
       display: block;
       margin-bottom: 8px;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
       color: var(--cv-subtext);
     }
 
@@ -636,7 +636,7 @@
       background: #f8fafc;
       color: var(--cv-text);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .chip.is-active {
@@ -657,7 +657,7 @@
     .price-row strong {
       color: var(--cv-navy);
       font-size: 25px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .monthly-price-box {
@@ -688,7 +688,7 @@
     .monthly-price-item .label {
       font-size: 14px;
       color: var(--cv-subtext);
-      font-weight: 900;
+      font-weight: 700;
       line-height: 1.2;
     }
 
@@ -699,7 +699,7 @@
       font-size: clamp(24px, 2.08vw, 26px);
       line-height: 1.08;
       letter-spacing: -0.075em;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--cv-blue);
       white-space: nowrap;
       transform: scaleX(0.96);
@@ -731,7 +731,7 @@
       background: #f3f4f6;
       color: var(--cv-text);
       font-size: 14px;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .cta-row {
@@ -745,7 +745,7 @@
       height: 50px;
       border: none;
       border-radius: 12px;
-      font-weight: 900;
+      font-weight: 700;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -778,7 +778,7 @@
       color: var(--cv-navy);
       border: 1px solid var(--cv-line);
       font-size: 15px;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .btn-phone:hover {
@@ -835,7 +835,7 @@
     .modal-title {
       margin: 0;
       font-size: 18px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .modal-close {
@@ -896,7 +896,7 @@
 
     .summary-item dd {
       margin: 0;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--cv-navy);
       text-align: right;
     }
@@ -920,7 +920,7 @@
       margin-bottom: 6px;
       color: var(--cv-subtext);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .modal-final-price strong {
@@ -960,7 +960,7 @@
     .section-kicker {
       color: var(--cv-blue);
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 6px;
     }
 
@@ -990,7 +990,7 @@
       color: var(--cv-navy);
       font-size: 24px;
       line-height: 1;
-      font-weight: 900;
+      font-weight: 700;
       box-shadow: 0 10px 24px rgba(16, 24, 40, 0.08);
       transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
     }
@@ -1091,14 +1091,14 @@
       background: #eef6ff;
       color: var(--cv-blue-dark);
       font-size: 12px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .best-price {
       margin-top: 16px;
       font-size: 13px;
       color: var(--cv-subtext);
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .best-price-row {
@@ -1119,7 +1119,7 @@
       display: block;
       font-size: 12px;
       color: var(--cv-subtext);
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .best-price-row strong {
@@ -1127,7 +1127,7 @@
       margin-top: 5px;
       color: var(--cv-blue);
       font-size: 16px;
-      font-weight: 900;
+      font-weight: 700;
       white-space: nowrap;
       letter-spacing: -0.03em;
     }
@@ -1184,7 +1184,7 @@
       background: var(--cv-blue);
       color: #fff;
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 16px;
     }
 
@@ -1204,7 +1204,7 @@
       color: var(--cv-subtext);
       font-size: 16px;
       line-height: 1.65;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .finance-points {
@@ -1220,7 +1220,7 @@
       background: #fff;
       color: var(--cv-text);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
       box-shadow: 0 7px 18px rgba(16, 24, 40, 0.06);
     }
 
@@ -1242,7 +1242,7 @@
       border: 1px solid rgba(16,185,129,0.3);
       color: #059669;
       font-size: 12px;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 12px;
       box-shadow: 0 3px 10px rgba(16,185,129,0.12);
     }
@@ -1266,7 +1266,7 @@
     }
     .finance-timer span {
       color: var(--cv-blue);
-      font-weight: 900;
+      font-weight: 700;
     }
 
     /* 조회 카운트 */
@@ -1285,7 +1285,7 @@
       border-radius: 999px;
       background: rgba(255,255,255,0.85);
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 700;
       color: var(--cv-navy);
       box-shadow: 0 3px 10px rgba(16,24,40,0.06);
     }
@@ -1302,7 +1302,7 @@
       background: #fff;
       color: var(--cv-blue);
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 700;
       margin-top: 16px;
       cursor: pointer;
       transition: background 0.15s, color 0.15s;
@@ -1347,7 +1347,7 @@
     .finance-picker-title {
       color: var(--cv-navy);
       font-size: 15px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .finance-picker-state {
@@ -1359,7 +1359,7 @@
       background: var(--cv-blue-light);
       color: var(--cv-blue);
       font-size: 12px;
-      font-weight: 900;
+      font-weight: 700;
       white-space: nowrap;
     }
 
@@ -1417,7 +1417,7 @@
       background: var(--cv-blue);
       color: #fff;
       font-size: 11px;
-      font-weight: 900;
+      font-weight: 700;
       box-shadow: 0 8px 18px rgba(18,104,232,0.24);
     }
 
@@ -1497,7 +1497,7 @@
       min-width: 0;
       color: var(--cv-navy);
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 700;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -1506,7 +1506,7 @@
     .finance-card-rate {
       color: var(--cv-subtext);
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 700;
       white-space: nowrap;
     }
 
@@ -1524,7 +1524,7 @@
       border: 1px solid rgba(229,231,235,0.9);
       color: var(--cv-subtext);
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 700;
       text-align: center;
     }
 
@@ -1554,7 +1554,7 @@
       align-items: center;
       gap: 9px;
       font-size: 15px;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--cv-navy);
     }
 
@@ -1596,7 +1596,7 @@
       background: var(--cv-blue);
       color: #fff;
       font-size: 11px;
-      font-weight: 900;
+      font-weight: 700;
       box-shadow: 0 7px 18px rgba(18, 104, 232, 0.28);
       animation: pulseLabel 1.4s ease-in-out infinite;
     }
@@ -1644,7 +1644,7 @@
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.18);
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 14px;
     }
 
@@ -1679,7 +1679,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      font-weight: 900;
+      font-weight: 700;
       box-shadow: 0 10px 30px rgba(16, 24, 40, 0.18);
     }
 
@@ -1879,7 +1879,163 @@
         font-size: 24px;
       }
     }
-  &lt;/style&gt;
+  
+
+    /* ==========================================================
+       260626 디자인 수정 요청 반영
+       - 페이지 내 폰트 두께는 Regular(400) / Bold(700) 2단계로 정리
+       - 지정 영역의 볼드 텍스트는 Regular로 완화
+    ========================================================== */
+    .carvillage-logo {
+      display: none !important;
+    }
+
+    .vehicle-top-info {
+      background: transparent !important;
+      border-color: transparent !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+
+    .vehicle-bottom-panel {
+      background: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .vehicle-spec-line,
+    .vehicle-thumb,
+    .condition-block .form-label,
+    .price-row &gt; span,
+    .monthly-price-item .label,
+    .finance-badge,
+    .finance-message p,
+    .finance-point,
+    .finance-picker-title,
+    .finance-choice-chip,
+    .tag,
+    .best-price,
+    .best-price-row span,
+    .event-label,
+    .finance-saving-copy,
+    .finance-saving-total {
+      font-weight: 400 !important;
+    }
+
+    .finance-saving-copy strong,
+    .finance-saving-total strong {
+      font-weight: 700 !important;
+    }
+
+    .finance-status-row {
+      align-items: flex-start !important;
+    }
+
+    .finance-live-group,
+    .finance-meta-actions {
+      padding-top: 0 !important;
+    }
+
+    .finance-live-badge,
+    .finance-meta-chip {
+      min-height: 28px !important;
+      line-height: 1 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      margin-top: 0 !important;
+    }
+
+    .finance-choice-marker {
+      z-index: 5 !important;
+      background: transparent !important;
+      border-color: rgba(18,104,232,0.78) !important;
+      box-shadow: 0 10px 30px rgba(18,104,232,0.14) !important;
+    }
+
+    .finance-logo-reel {
+      z-index: 3 !important;
+    }
+
+    .rolling-logo-card {
+      opacity: 0.28 !important;
+      filter: saturate(0.55) !important;
+    }
+
+    .rolling-logo-card.is-active {
+      opacity: 1 !important;
+      filter: none !important;
+      transform: scale(1.025) !important;
+      border-color: rgba(18,104,232,0.52) !important;
+      box-shadow: 0 13px 28px rgba(18,104,232,0.18) !important;
+    }
+
+    @media (min-width: 721px) {
+      .best-slider {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 18px !important;
+        overflow: visible !important;
+        padding: 8px 0 24px !important;
+        margin: 0 !important;
+      }
+
+      .best-card {
+        width: 100% !important;
+        flex: none !important;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .best-slider {
+        display: flex !important;
+        overflow-x: auto !important;
+        padding: 8px 4px 24px !important;
+        margin: 0 -4px !important;
+      }
+    }
+
+    /* 260626 추가 수정 반영: 금융사 롤링 선택 영역 / 이벤트 배너 */
+    .finance-choice-marker {
+      z-index: 7 !important;
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      outline: 0 !important;
+    }
+
+    .finance-logo-reel {
+      z-index: 3 !important;
+    }
+
+    .rolling-logo-card {
+      opacity: 0.24 !important;
+      filter: grayscale(0.25) saturate(0.5) blur(0.2px) !important;
+      background: rgba(255,255,255,0.62) !important;
+      box-shadow: none !important;
+    }
+
+    .rolling-logo-card.is-active {
+      position: relative !important;
+      z-index: 6 !important;
+      opacity: 1 !important;
+      filter: none !important;
+      background: #fff !important;
+      transform: scale(1.03) !important;
+      border: 2px solid rgba(18,104,232,0.84) !important;
+      box-shadow: 0 14px 30px rgba(18,104,232,0.20) !important;
+    }
+
+    .event-label {
+      align-self: flex-start !important;
+      width: fit-content !important;
+      max-width: 100% !important;
+      white-space: nowrap !important;
+    }
+
+    .event-desc {
+      font-weight: 400 !important;
+    }
+
+&lt;/style&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
@@ -1890,10 +2046,6 @@
         &lt;div class=&quot;product-grid&quot;&gt;
 
           &lt;article class=&quot;vehicle-visual&quot; aria-label=&quot;차량 대표 이미지&quot;&gt;
-            &lt;div class=&quot;carvillage-logo&quot; aria-label=&quot;카빌리지&quot;&gt;
-              &lt;img src=&quot;https://carvillage.co.kr/data/skin/front/carvillage/assets/images/logo.png&quot; alt=&quot;카빌리지 로고&quot; style=&quot;height:18px;display:block;&quot; /&gt;
-            &lt;/div&gt;
-
             &lt;div class=&quot;vehicle-top-info&quot;&gt;
               &lt;div class=&quot;vehicle-brand-line&quot;&gt;
                 &lt;span&gt;KIA&lt;/span&gt;
@@ -2053,7 +2205,8 @@
             &lt;/h2&gt;
 
             &lt;p&gt;
-              카빌리지는 금융사별 렌트·리스 조건을 비교해 고객 조건에 맞는 최저가 견적을 빠르게 안내합니다.
+              카빌리지는 금융사별 렌트·리스 조건을 비교해&lt;br /&gt;
+              고객 조건에 맞는 최저가 견적을 빠르게 안내합니다.
             &lt;/p&gt;
 
             &lt;div class=&quot;finance-points&quot;&gt;
@@ -2064,15 +2217,15 @@
           &lt;/div&gt;
 
           &lt;div style=&quot;position:relative;z-index:2;&quot;&gt;
-            &lt;div style=&quot;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap;&quot;&gt;
-              &lt;div&gt;
+            &lt;div class=&quot;finance-status-row&quot; style=&quot;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap;&quot;&gt;
+              &lt;div class=&quot;finance-live-group&quot;&gt;
                 &lt;div class=&quot;finance-live-badge&quot;&gt;
                   &lt;span class=&quot;finance-live-dot&quot;&gt;&lt;/span&gt;
-                  실시간 최저가 탐색 중
+                  실시간 최저가 탐색중
                 &lt;/div&gt;
                 &lt;div class=&quot;finance-timer&quot;&gt;마지막 업데이트 &lt;span id=&quot;lastUpdateTime&quot;&gt;00:00&lt;/span&gt; 전&lt;/div&gt;
               &lt;/div&gt;
-              &lt;div style=&quot;display:flex;flex-direction:column;align-items:flex-end;gap:6px;&quot;&gt;
+              &lt;div class=&quot;finance-meta-actions&quot; style=&quot;display:flex;flex-direction:column;align-items:flex-end;gap:6px;&quot;&gt;
                 &lt;div class=&quot;finance-meta-chip&quot;&gt;👁 오늘 &lt;strong id=&quot;viewCount&quot; style=&quot;color:var(--cv-blue);margin-left:3px;&quot;&gt;2,847&lt;/strong&gt;명 조회&lt;/div&gt;
                 &lt;button class=&quot;finance-refresh-btn&quot; id=&quot;refreshBtn&quot; type=&quot;button&quot;&gt;
                   &lt;svg width=&quot;13&quot; height=&quot;13&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.5&quot;&gt;&lt;path d=&quot;M1 4v6h6&quot;/&gt;&lt;path d=&quot;M23 20v-6h-6&quot;/&gt;&lt;path d=&quot;M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15&quot;/&gt;&lt;/svg&gt;
@@ -2107,21 +2260,18 @@
                 &lt;div class=&quot;finance-row is-lowest&quot;&gt;
                   &lt;span class=&quot;lowest-label&quot;&gt;스캐닝 완료&lt;/span&gt;
                   &lt;div class=&quot;finance-company&quot;&gt;
-                    &lt;div class=&quot;finance-logo-img&quot; style=&quot;border-color:rgba(18,104,232,0.25);background:#eaf4ff;padding:4px;&quot;&gt;
-                      &lt;img src=&quot;data:image/png;base64,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&quot; alt=&quot;카빌리지&quot; style=&quot;width:100%;height:100%;object-fit:contain;&quot; /&gt;
-                    &lt;/div&gt;
                     카빌리지 최적 조건
                   &lt;/div&gt;
-                  &lt;div class=&quot;finance-price&quot; id=&quot;finalPriceText&quot; style=&quot;color:var(--cv-blue);font-size:22px;font-weight:900;&quot;&gt;월 183,137원&lt;/div&gt;
+                  &lt;div class=&quot;finance-price&quot; id=&quot;finalPriceText&quot; style=&quot;color:var(--cv-blue);font-size:22px;font-weight: 700;&quot;&gt;월 183,137원&lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
 
             &lt;div style=&quot;margin-top:14px;padding:12px 16px;border-radius:14px;background:rgba(18,104,232,0.07);border:1px solid rgba(18,104,232,0.14);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;&quot;&gt;
-              &lt;div style=&quot;font-size:13px;color:var(--cv-navy);font-weight:800;&quot;&gt;
+              &lt;div class=&quot;finance-saving-copy&quot; style=&quot;font-size:13px;color:var(--cv-navy);font-weight: 700;&quot;&gt;
                 💰 카빌리지 추천 조건으로 계약시 최대 &lt;strong style=&quot;color:var(--cv-blue);&quot; id=&quot;savingAmount&quot;&gt;22,663원/월&lt;/strong&gt; 절약 예상
               &lt;/div&gt;
-              &lt;div style=&quot;font-size:12px;color:var(--cv-subtext);font-weight:700;&quot;&gt;
+              &lt;div class=&quot;finance-saving-total&quot; style=&quot;font-size:12px;color:var(--cv-subtext);font-weight: 700;&quot;&gt;
                 36개월 기준 총 &lt;strong id=&quot;totalSaving&quot; style=&quot;color:var(--cv-blue);&quot;&gt;약 81만원&lt;/strong&gt; 차이
               &lt;/div&gt;
             &lt;/div&gt;
@@ -2477,17 +2627,17 @@
     // ============================================================
     (function() {
       let secondsSinceUpdate = 0;
-      const lastUpdateEl = document.getElementById(&#x27;lastUpdateTime&#x27;);
-      const viewCountEl  = document.getElementById(&#x27;viewCount&#x27;);
-      const savingEl     = document.getElementById(&#x27;savingAmount&#x27;);
-      const totalEl      = document.getElementById(&#x27;totalSaving&#x27;);
+      const lastUpdateEl = document.getElementById('lastUpdateTime');
+      const viewCountEl  = document.getElementById('viewCount');
+      const savingEl     = document.getElementById('savingAmount');
+      const totalEl      = document.getElementById('totalSaving');
 
       function updateTimer() {
         secondsSinceUpdate++;
         if (secondsSinceUpdate &lt; 60) {
-          lastUpdateEl.textContent = secondsSinceUpdate + &#x27;초&#x27;;
+          lastUpdateEl.textContent = secondsSinceUpdate + '초';
         } else {
-          lastUpdateEl.textContent = Math.floor(secondsSinceUpdate / 60) + &#x27;분&#x27;;
+          lastUpdateEl.textContent = Math.floor(secondsSinceUpdate / 60) + '분';
         }
       }
       setInterval(updateTimer, 1000);
@@ -2496,26 +2646,26 @@
       function tickViews() {
         if (Math.random() &lt; 0.35) {
           viewBase += Math.floor(Math.random() * 3) + 1;
-          viewCountEl.textContent = viewBase.toLocaleString(&#x27;ko-KR&#x27;);
+          viewCountEl.textContent = viewBase.toLocaleString('ko-KR');
         }
       }
       setInterval(tickViews, 2800);
 
-      const refreshBtn = document.getElementById(&#x27;refreshBtn&#x27;);
-      const reel = document.getElementById(&#x27;financeLogoReel&#x27;);
-      const pickerState = document.getElementById(&#x27;pickerState&#x27;);
+      const refreshBtn = document.getElementById('refreshBtn');
+      const reel = document.getElementById('financeLogoReel');
+      const pickerState = document.getElementById('pickerState');
       const financeCompanies = [
-        { name: &#x27;DGB캐피탈&#x27;, logo: &#x27;logo-dgb&#x27;, rate: &#x27;월 187,900원&#x27; },
-        { name: &#x27;JB우리캐피탈&#x27;, logo: &#x27;logo-jb&#x27;, rate: &#x27;월 186,700원&#x27; },
-        { name: &#x27;ORIX&#x27;, logo: &#x27;logo-orix&#x27;, rate: &#x27;월 189,400원&#x27; },
-        { name: &#x27;하나캐피탈&#x27;, logo: &#x27;logo-hana&#x27;, rate: &#x27;월 185,600원&#x27; },
-        { name: &#x27;SK렌터카&#x27;, logo: &#x27;logo-sk&#x27;, rate: &#x27;월 188,200원&#x27; },
-        { name: &#x27;삼성카드&#x27;, logo: &#x27;logo-samsung&#x27;, rate: &#x27;월 186,100원&#x27; },
-        { name: &#x27;신한카드&#x27;, logo: &#x27;logo-shinhan&#x27;, rate: &#x27;월 184,900원&#x27; },
-        { name: &#x27;redcap 렌터카&#x27;, logo: &#x27;logo-redcap&#x27;, rate: &#x27;월 190,300원&#x27; },
-        { name: &#x27;롯데캐피탈&#x27;, logo: &#x27;logo-lotte&#x27;, rate: &#x27;월 187,200원&#x27; },
-        { name: &#x27;메리츠캐피탈&#x27;, logo: &#x27;logo-meritz&#x27;, rate: &#x27;월 185,300원&#x27; },
-        { name: &#x27;하모니렌트카&#x27;, logo: &#x27;logo-harmony&#x27;, rate: &#x27;월 188,800원&#x27; }
+        { name: 'DGB캐피탈', logo: 'logo-dgb', rate: '월 187,900원' },
+        { name: 'JB우리캐피탈', logo: 'logo-jb', rate: '월 186,700원' },
+        { name: 'ORIX', logo: 'logo-orix', rate: '월 189,400원' },
+        { name: '하나캐피탈', logo: 'logo-hana', rate: '월 185,600원' },
+        { name: 'SK렌터카', logo: 'logo-sk', rate: '월 188,200원' },
+        { name: '삼성카드', logo: 'logo-samsung', rate: '월 186,100원' },
+        { name: '신한카드', logo: 'logo-shinhan', rate: '월 184,900원' },
+        { name: 'redcap 렌터카', logo: 'logo-redcap', rate: '월 190,300원' },
+        { name: '롯데캐피탈', logo: 'logo-lotte', rate: '월 187,200원' },
+        { name: '메리츠캐피탈', logo: 'logo-meritz', rate: '월 185,300원' },
+        { name: '하모니렌트카', logo: 'logo-harmony', rate: '월 188,800원' }
       ];
 
       let reelIndex = 0;
@@ -2523,8 +2673,8 @@
       const itemHeight = 66;
 
       function makeLogoCard(company) {
-        const card = document.createElement(&#x27;div&#x27;);
-        card.className = &#x27;rolling-logo-card&#x27;;
+        const card = document.createElement('div');
+        card.className = 'rolling-logo-card';
         card.innerHTML = `
           &lt;span class=&quot;finance-logo-sprite ${company.logo}&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
           &lt;span class=&quot;finance-card-name&quot;&gt;${company.name}&lt;/span&gt;
@@ -2535,7 +2685,7 @@
 
       function buildLogoReel() {
         if (!reel) return;
-        reel.innerHTML = &#x27;&#x27;;
+        reel.innerHTML = '';
         [...financeCompanies, ...financeCompanies].forEach(company =&gt; {
           reel.appendChild(makeLogoCard(company));
         });
@@ -2544,16 +2694,16 @@
 
       function updateReel(skipTransition) {
         if (!reel) return;
-        const cards = reel.querySelectorAll(&#x27;.rolling-logo-card&#x27;);
-        cards.forEach(card =&gt; card.classList.remove(&#x27;is-active&#x27;));
-        const active = cards[reelIndex + 1];
-        if (active) active.classList.add(&#x27;is-active&#x27;);
+        const cards = reel.querySelectorAll('.rolling-logo-card');
+        cards.forEach(card =&gt; card.classList.remove('is-active'));
+        const active = cards[reelIndex];
+        if (active) active.classList.add('is-active');
 
-        if (skipTransition) reel.style.transition = &#x27;none&#x27;;
+        if (skipTransition) reel.style.transition = 'none';
         reel.style.transform = `translateY(${-reelIndex * itemHeight}px)`;
         if (skipTransition) {
           void reel.offsetHeight;
-          reel.style.transition = &#x27;&#x27;;
+          reel.style.transition = '';
         }
 
         const company = financeCompanies[reelIndex % financeCompanies.length];
@@ -2572,21 +2722,21 @@
       }
 
       function flashResult() {
-        const finalResult = document.querySelector(&#x27;.finance-row.is-lowest&#x27;);
+        const finalResult = document.querySelector('.finance-row.is-lowest');
         if (finalResult) {
-          finalResult.classList.remove(&#x27;price-flash&#x27;);
+          finalResult.classList.remove('price-flash');
           void finalResult.offsetWidth;
-          finalResult.classList.add(&#x27;price-flash&#x27;);
+          finalResult.classList.add('price-flash');
         }
 
         const highestPrice = 205800 + ((Math.floor(Math.random() * 4) + 1) * 500);
-        const currentLow = parseInt(finalPriceText.textContent.replace(/[^0-9]/g, &#x27;&#x27;)) || 183137;
+        const currentLow = parseInt(finalPriceText.textContent.replace(/[^0-9]/g, '')) || 183137;
         const diff = highestPrice - currentLow;
 
-        if (savingEl) savingEl.textContent = diff.toLocaleString(&#x27;ko-KR&#x27;) + &#x27;원/월&#x27;;
+        if (savingEl) savingEl.textContent = diff.toLocaleString('ko-KR') + '원/월';
         if (totalEl) {
           const total = Math.round(diff * 36 / 10000);
-          totalEl.textContent = &#x27;약 &#x27; + total + &#x27;만원&#x27;;
+          totalEl.textContent = '약 ' + total + '만원';
         }
       }
 
@@ -2599,7 +2749,7 @@
           ticks += 1;
           if (ticks &gt;= 14) {
             clearInterval(reelTimer);
-            if (pickerState) pickerState.textContent = &#x27;카빌리지 최적 조건 선택 완료&#x27;;
+            if (pickerState) pickerState.textContent = '카빌리지 최적 조건 선택 완료';
             setTimeout(flashResult, 260);
             setTimeout(() =&gt; {
               reelTimer = setInterval(advanceReel, 1450);
@@ -2613,12 +2763,12 @@
       setTimeout(runScanningMotion, 450);
 
       if (refreshBtn) {
-        refreshBtn.addEventListener(&#x27;click&#x27;, function() {
-          this.classList.add(&#x27;spinning&#x27;);
-          setTimeout(() =&gt; this.classList.remove(&#x27;spinning&#x27;), 650);
+        refreshBtn.addEventListener('click', function() {
+          this.classList.add('spinning');
+          setTimeout(() =&gt; this.classList.remove('spinning'), 650);
           runScanningMotion();
           secondsSinceUpdate = 0;
-          if (lastUpdateEl) lastUpdateEl.textContent = &#x27;방금&#x27;;
+          if (lastUpdateEl) lastUpdateEl.textContent = '방금';
         });
       }
     })();
@@ -2638,17 +2788,16 @@
 
   &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;"></iframe>
-        </div>
-      </section>
-
-      <section class="preview-panel" id="panel-mobile" role="tabpanel" aria-labelledby="tab-mobile" data-panel="mobile">
-        <div class="device-info"><span><strong>모바일 버전</strong> - 390px 내외 모바일 화면 기준 미리보기</span><span>URL 하나로 PC 모바일 확인 가능</span></div>
-        <div class="mobile-preview-area">
-          <div class="phone-shell" aria-label="모바일 디바이스 프레임">
-            <div class="phone-speaker"></div>
-            <div class="mobile-frame-wrap">
-              <iframe class="mobile-frame" title="모바일 버전 미리보기" srcdoc="&lt;!doctype html&gt;
+&lt;/html&gt;" title="PC 버전 미리보기"></iframe>
+</div>
+</section>
+<section aria-labelledby="tab-mobile" class="preview-panel" data-panel="mobile" id="panel-mobile" role="tabpanel">
+<div class="device-info"><span><strong>모바일 버전</strong> - 390px 내외 모바일 화면 기준 미리보기</span><span>URL 하나로 PC 모바일 확인 가능</span></div>
+<div class="mobile-preview-area">
+<div aria-label="모바일 디바이스 프레임" class="phone-shell">
+<div class="phone-speaker"></div>
+<div class="mobile-frame-wrap">
+<iframe class="mobile-frame" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;ko&quot;&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;utf-8&quot; /&gt;
@@ -2804,7 +2953,7 @@
       align-items: center;
       justify-content: center;
       font-size: 12px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .vehicle-top-info {
@@ -2828,13 +2977,13 @@
       gap: 12px;
       color: var(--cv-navy);
       font-size: 30px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .vehicle-brand-line span {
       color: var(--cv-blue);
       font-size: 17px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .vehicle-spec-line {
@@ -2879,7 +3028,7 @@
       background: transparent;
       color: var(--cv-subtext);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .view-tab.is-active {
@@ -2926,7 +3075,7 @@
       background: transparent;
       color: var(--cv-subtext);
       font-size: 15px;
-      font-weight: 800;
+      font-weight: 700;
       padding: 0 0 8px;
     }
 
@@ -3007,7 +3156,7 @@
       background: linear-gradient(90deg, #0b74df, #263fbf);
       color: #fff;
       font-size: 17px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .estimate-content {
@@ -3064,7 +3213,7 @@
       background: #fff;
       color: var(--cv-text);
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .option-tab.is-active {
@@ -3081,7 +3230,7 @@
       display: block;
       margin-bottom: 8px;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
       color: var(--cv-subtext);
     }
 
@@ -3098,7 +3247,7 @@
       background: #f8fafc;
       color: var(--cv-text);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .chip.is-active {
@@ -3119,7 +3268,7 @@
     .price-row strong {
       color: var(--cv-navy);
       font-size: 25px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .monthly-price-box {
@@ -3140,14 +3289,14 @@
     .monthly-price-item .label {
       font-size: 14px;
       color: var(--cv-subtext);
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .monthly-price-item .amount {
       margin-top: 4px;
       font-size: 25px;
       line-height: 1.15;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--cv-blue);
       white-space: nowrap;
     }
@@ -3177,7 +3326,7 @@
       background: #f3f4f6;
       color: var(--cv-text);
       font-size: 14px;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .cta-row {
@@ -3191,7 +3340,7 @@
       height: 50px;
       border: none;
       border-radius: 12px;
-      font-weight: 900;
+      font-weight: 700;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -3224,7 +3373,7 @@
       color: var(--cv-navy);
       border: 1px solid var(--cv-line);
       font-size: 15px;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .btn-phone:hover {
@@ -3281,7 +3430,7 @@
     .modal-title {
       margin: 0;
       font-size: 18px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .modal-close {
@@ -3342,7 +3491,7 @@
 
     .summary-item dd {
       margin: 0;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--cv-navy);
       text-align: right;
     }
@@ -3366,7 +3515,7 @@
       margin-bottom: 6px;
       color: var(--cv-subtext);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .modal-final-price strong {
@@ -3406,7 +3555,7 @@
     .section-kicker {
       color: var(--cv-blue);
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 6px;
     }
 
@@ -3436,7 +3585,7 @@
       color: var(--cv-navy);
       font-size: 24px;
       line-height: 1;
-      font-weight: 900;
+      font-weight: 700;
       box-shadow: 0 10px 24px rgba(16, 24, 40, 0.08);
       transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
     }
@@ -3537,14 +3686,14 @@
       background: #eef6ff;
       color: var(--cv-blue-dark);
       font-size: 12px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .best-price {
       margin-top: 16px;
       font-size: 13px;
       color: var(--cv-subtext);
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .best-price-row {
@@ -3565,7 +3714,7 @@
       display: block;
       font-size: 12px;
       color: var(--cv-subtext);
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .best-price-row strong {
@@ -3573,7 +3722,7 @@
       margin-top: 5px;
       color: var(--cv-blue);
       font-size: 16px;
-      font-weight: 900;
+      font-weight: 700;
       white-space: nowrap;
       letter-spacing: -0.03em;
     }
@@ -3630,7 +3779,7 @@
       background: var(--cv-blue);
       color: #fff;
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 16px;
     }
 
@@ -3650,7 +3799,7 @@
       color: var(--cv-subtext);
       font-size: 16px;
       line-height: 1.65;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .finance-points {
@@ -3666,7 +3815,7 @@
       background: #fff;
       color: var(--cv-text);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
       box-shadow: 0 7px 18px rgba(16, 24, 40, 0.06);
     }
 
@@ -3688,7 +3837,7 @@
       border: 1px solid rgba(16,185,129,0.3);
       color: #059669;
       font-size: 12px;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 12px;
       box-shadow: 0 3px 10px rgba(16,185,129,0.12);
     }
@@ -3712,7 +3861,7 @@
     }
     .finance-timer span {
       color: var(--cv-blue);
-      font-weight: 900;
+      font-weight: 700;
     }
 
     /* 조회 카운트 */
@@ -3731,7 +3880,7 @@
       border-radius: 999px;
       background: rgba(255,255,255,0.85);
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 700;
       color: var(--cv-navy);
       box-shadow: 0 3px 10px rgba(16,24,40,0.06);
     }
@@ -3748,7 +3897,7 @@
       background: #fff;
       color: var(--cv-blue);
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 700;
       margin-top: 16px;
       cursor: pointer;
       transition: background 0.15s, color 0.15s;
@@ -3793,7 +3942,7 @@
     .finance-picker-title {
       color: var(--cv-navy);
       font-size: 15px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .finance-picker-state {
@@ -3805,7 +3954,7 @@
       background: var(--cv-blue-light);
       color: var(--cv-blue);
       font-size: 12px;
-      font-weight: 900;
+      font-weight: 700;
       white-space: nowrap;
     }
 
@@ -3863,7 +4012,7 @@
       background: var(--cv-blue);
       color: #fff;
       font-size: 11px;
-      font-weight: 900;
+      font-weight: 700;
       box-shadow: 0 8px 18px rgba(18,104,232,0.24);
     }
 
@@ -3943,7 +4092,7 @@
       min-width: 0;
       color: var(--cv-navy);
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 700;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -3952,7 +4101,7 @@
     .finance-card-rate {
       color: var(--cv-subtext);
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 700;
       white-space: nowrap;
     }
 
@@ -3970,7 +4119,7 @@
       border: 1px solid rgba(229,231,235,0.9);
       color: var(--cv-subtext);
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 700;
       text-align: center;
     }
 
@@ -4000,7 +4149,7 @@
       align-items: center;
       gap: 9px;
       font-size: 15px;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--cv-navy);
     }
 
@@ -4042,7 +4191,7 @@
       background: var(--cv-blue);
       color: #fff;
       font-size: 11px;
-      font-weight: 900;
+      font-weight: 700;
       box-shadow: 0 7px 18px rgba(18, 104, 232, 0.28);
       animation: pulseLabel 1.4s ease-in-out infinite;
     }
@@ -4090,7 +4239,7 @@
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.18);
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 14px;
     }
 
@@ -4125,7 +4274,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      font-weight: 900;
+      font-weight: 700;
       box-shadow: 0 10px 30px rgba(16, 24, 40, 0.18);
     }
 
@@ -4677,7 +4826,169 @@
       border-radius: 22px;
     }
 
-  &lt;/style&gt;
+  
+
+    /* ==========================================================
+       260626 디자인 수정 요청 반영
+       - 페이지 내 폰트 두께는 Regular(400) / Bold(700) 2단계로 정리
+       - 지정 영역의 볼드 텍스트는 Regular로 완화
+    ========================================================== */
+    .carvillage-logo {
+      display: none !important;
+    }
+
+    .vehicle-top-info {
+      background: transparent !important;
+      border-color: transparent !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+
+    .vehicle-bottom-panel {
+      background: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .vehicle-spec-line,
+    .vehicle-thumb,
+    .condition-block .form-label,
+    .price-row &gt; span,
+    .monthly-price-item .label,
+    .finance-badge,
+    .finance-message p,
+    .finance-point,
+    .finance-picker-title,
+    .finance-choice-chip,
+    .tag,
+    .best-price,
+    .best-price-row span,
+    .event-label,
+    .finance-saving-copy,
+    .finance-saving-total {
+      font-weight: 400 !important;
+    }
+
+    .finance-saving-copy strong,
+    .finance-saving-total strong {
+      font-weight: 700 !important;
+    }
+
+    .finance-status-row {
+      align-items: flex-start !important;
+    }
+
+    .finance-live-group,
+    .finance-meta-actions {
+      padding-top: 0 !important;
+    }
+
+    .finance-live-badge,
+    .finance-meta-chip {
+      min-height: 28px !important;
+      line-height: 1 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      margin-top: 0 !important;
+    }
+
+    .finance-choice-marker {
+      z-index: 5 !important;
+      background: transparent !important;
+      border-color: rgba(18,104,232,0.78) !important;
+      box-shadow: 0 10px 30px rgba(18,104,232,0.14) !important;
+    }
+
+    .finance-logo-reel {
+      z-index: 3 !important;
+    }
+
+    .rolling-logo-card {
+      opacity: 0.28 !important;
+      filter: saturate(0.55) !important;
+    }
+
+    .rolling-logo-card.is-active {
+      opacity: 1 !important;
+      filter: none !important;
+      transform: scale(1.025) !important;
+      border-color: rgba(18,104,232,0.52) !important;
+      box-shadow: 0 13px 28px rgba(18,104,232,0.18) !important;
+    }
+
+    @media (min-width: 721px) {
+      .best-slider {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 18px !important;
+        overflow: visible !important;
+        padding: 8px 0 24px !important;
+        margin: 0 !important;
+      }
+
+      .best-card {
+        width: 100% !important;
+        flex: none !important;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .best-slider {
+        display: flex !important;
+        overflow-x: auto !important;
+        padding: 8px 4px 24px !important;
+        margin: 0 -4px !important;
+      }
+    }
+
+
+    /* 모바일 절약 문구 줄바꿈 고정 */
+    .finance-saving-copy {
+      line-height: 1.55 !important;
+    }
+
+    /* 260626 추가 수정 반영: 금융사 롤링 선택 영역 / 이벤트 배너 */
+    .finance-choice-marker {
+      z-index: 7 !important;
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      outline: 0 !important;
+    }
+
+    .finance-logo-reel {
+      z-index: 3 !important;
+    }
+
+    .rolling-logo-card {
+      opacity: 0.24 !important;
+      filter: grayscale(0.25) saturate(0.5) blur(0.2px) !important;
+      background: rgba(255,255,255,0.62) !important;
+      box-shadow: none !important;
+    }
+
+    .rolling-logo-card.is-active {
+      position: relative !important;
+      z-index: 6 !important;
+      opacity: 1 !important;
+      filter: none !important;
+      background: #fff !important;
+      transform: scale(1.03) !important;
+      border: 2px solid rgba(18,104,232,0.84) !important;
+      box-shadow: 0 14px 30px rgba(18,104,232,0.20) !important;
+    }
+
+    .event-label {
+      align-self: flex-start !important;
+      width: fit-content !important;
+      max-width: 100% !important;
+      white-space: nowrap !important;
+    }
+
+    .event-desc {
+      font-weight: 400 !important;
+    }
+
+&lt;/style&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
@@ -4688,10 +4999,6 @@
         &lt;div class=&quot;product-grid&quot;&gt;
 
           &lt;article class=&quot;vehicle-visual&quot; aria-label=&quot;차량 대표 이미지&quot;&gt;
-            &lt;div class=&quot;carvillage-logo&quot; aria-label=&quot;카빌리지&quot;&gt;
-              &lt;img src=&quot;https://carvillage.co.kr/data/skin/front/carvillage/assets/images/logo.png&quot; alt=&quot;카빌리지 로고&quot; style=&quot;height:18px;display:block;&quot; /&gt;
-            &lt;/div&gt;
-
             &lt;div class=&quot;vehicle-top-info&quot;&gt;
               &lt;div class=&quot;vehicle-brand-line&quot;&gt;
                 &lt;span&gt;KIA&lt;/span&gt;
@@ -4858,7 +5165,8 @@
             &lt;/h2&gt;
 
             &lt;p&gt;
-              카빌리지는 금융사별 렌트·리스 조건을 비교해 고객 조건에 맞는 최저가 견적을 빠르게 안내합니다.
+              카빌리지는 금융사별 렌트·리스 조건을 비교해&lt;br /&gt;
+              고객 조건에 맞는 최저가 견적을 빠르게 안내합니다.
             &lt;/p&gt;
 
             &lt;div class=&quot;finance-points&quot;&gt;
@@ -4869,15 +5177,15 @@
           &lt;/div&gt;
 
           &lt;div style=&quot;position:relative;z-index:2;&quot;&gt;
-            &lt;div style=&quot;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap;&quot;&gt;
-              &lt;div&gt;
+            &lt;div class=&quot;finance-status-row&quot; style=&quot;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap;&quot;&gt;
+              &lt;div class=&quot;finance-live-group&quot;&gt;
                 &lt;div class=&quot;finance-live-badge&quot;&gt;
                   &lt;span class=&quot;finance-live-dot&quot;&gt;&lt;/span&gt;
-                  실시간 최저가 탐색 중
+                  실시간 최저가 탐색중
                 &lt;/div&gt;
                 &lt;div class=&quot;finance-timer&quot;&gt;마지막 업데이트 &lt;span id=&quot;lastUpdateTime&quot;&gt;00:00&lt;/span&gt; 전&lt;/div&gt;
               &lt;/div&gt;
-              &lt;div style=&quot;display:flex;flex-direction:column;align-items:flex-end;gap:6px;&quot;&gt;
+              &lt;div class=&quot;finance-meta-actions&quot; style=&quot;display:flex;flex-direction:column;align-items:flex-end;gap:6px;&quot;&gt;
                 &lt;div class=&quot;finance-meta-chip&quot;&gt;👁 오늘 &lt;strong id=&quot;viewCount&quot; style=&quot;color:var(--cv-blue);margin-left:3px;&quot;&gt;2,847&lt;/strong&gt;명 조회&lt;/div&gt;
                 &lt;button class=&quot;finance-refresh-btn&quot; id=&quot;refreshBtn&quot; type=&quot;button&quot;&gt;
                   &lt;svg width=&quot;13&quot; height=&quot;13&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.5&quot;&gt;&lt;path d=&quot;M1 4v6h6&quot;/&gt;&lt;path d=&quot;M23 20v-6h-6&quot;/&gt;&lt;path d=&quot;M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15&quot;/&gt;&lt;/svg&gt;
@@ -4912,21 +5220,19 @@
                 &lt;div class=&quot;finance-row is-lowest&quot;&gt;
                   &lt;span class=&quot;lowest-label&quot;&gt;스캐닝 완료&lt;/span&gt;
                   &lt;div class=&quot;finance-company&quot;&gt;
-                    &lt;div class=&quot;finance-logo-img&quot; style=&quot;border-color:rgba(18,104,232,0.25);background:#eaf4ff;padding:4px;&quot;&gt;
-                      &lt;img src=&quot;data:image/png;base64,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&quot; alt=&quot;카빌리지&quot; style=&quot;width:100%;height:100%;object-fit:contain;&quot; /&gt;
-                    &lt;/div&gt;
                     카빌리지 최적 조건
                   &lt;/div&gt;
-                  &lt;div class=&quot;finance-price&quot; id=&quot;finalPriceText&quot; style=&quot;color:var(--cv-blue);font-size:22px;font-weight:900;&quot;&gt;월 183,137원&lt;/div&gt;
+                  &lt;div class=&quot;finance-price&quot; id=&quot;finalPriceText&quot; style=&quot;color:var(--cv-blue);font-size:22px;font-weight: 700;&quot;&gt;월 183,137원&lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
 
             &lt;div style=&quot;margin-top:14px;padding:12px 16px;border-radius:14px;background:rgba(18,104,232,0.07);border:1px solid rgba(18,104,232,0.14);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;&quot;&gt;
-              &lt;div style=&quot;font-size:13px;color:var(--cv-navy);font-weight:800;&quot;&gt;
-                💰 카빌리지 추천 조건으로 계약시 최대 &lt;strong style=&quot;color:var(--cv-blue);&quot; id=&quot;savingAmount&quot;&gt;22,663원/월&lt;/strong&gt; 절약 예상
+              &lt;div class=&quot;finance-saving-copy&quot; style=&quot;font-size:13px;color:var(--cv-navy);font-weight: 700;&quot;&gt;
+                💰 카빌리지 추천 조건으로 계약시&lt;br /&gt;
+                최대 &lt;strong style=&quot;color:var(--cv-blue);&quot; id=&quot;savingAmount&quot;&gt;23,163원/월&lt;/strong&gt; 절약 예상
               &lt;/div&gt;
-              &lt;div style=&quot;font-size:12px;color:var(--cv-subtext);font-weight:700;&quot;&gt;
+              &lt;div class=&quot;finance-saving-total&quot; style=&quot;font-size:12px;color:var(--cv-subtext);font-weight: 700;&quot;&gt;
                 36개월 기준 총 &lt;strong id=&quot;totalSaving&quot; style=&quot;color:var(--cv-blue);&quot;&gt;약 81만원&lt;/strong&gt; 차이
               &lt;/div&gt;
             &lt;/div&gt;
@@ -5284,17 +5590,17 @@
     // ============================================================
     (function() {
       let secondsSinceUpdate = 0;
-      const lastUpdateEl = document.getElementById(&#x27;lastUpdateTime&#x27;);
-      const viewCountEl  = document.getElementById(&#x27;viewCount&#x27;);
-      const savingEl     = document.getElementById(&#x27;savingAmount&#x27;);
-      const totalEl      = document.getElementById(&#x27;totalSaving&#x27;);
+      const lastUpdateEl = document.getElementById('lastUpdateTime');
+      const viewCountEl  = document.getElementById('viewCount');
+      const savingEl     = document.getElementById('savingAmount');
+      const totalEl      = document.getElementById('totalSaving');
 
       function updateTimer() {
         secondsSinceUpdate++;
         if (secondsSinceUpdate &lt; 60) {
-          lastUpdateEl.textContent = secondsSinceUpdate + &#x27;초&#x27;;
+          lastUpdateEl.textContent = secondsSinceUpdate + '초';
         } else {
-          lastUpdateEl.textContent = Math.floor(secondsSinceUpdate / 60) + &#x27;분&#x27;;
+          lastUpdateEl.textContent = Math.floor(secondsSinceUpdate / 60) + '분';
         }
       }
       setInterval(updateTimer, 1000);
@@ -5303,26 +5609,26 @@
       function tickViews() {
         if (Math.random() &lt; 0.35) {
           viewBase += Math.floor(Math.random() * 3) + 1;
-          viewCountEl.textContent = viewBase.toLocaleString(&#x27;ko-KR&#x27;);
+          viewCountEl.textContent = viewBase.toLocaleString('ko-KR');
         }
       }
       setInterval(tickViews, 2800);
 
-      const refreshBtn = document.getElementById(&#x27;refreshBtn&#x27;);
-      const reel = document.getElementById(&#x27;financeLogoReel&#x27;);
-      const pickerState = document.getElementById(&#x27;pickerState&#x27;);
+      const refreshBtn = document.getElementById('refreshBtn');
+      const reel = document.getElementById('financeLogoReel');
+      const pickerState = document.getElementById('pickerState');
       const financeCompanies = [
-        { name: &#x27;DGB캐피탈&#x27;, logo: &#x27;logo-dgb&#x27;, rate: &#x27;월 187,900원&#x27; },
-        { name: &#x27;JB우리캐피탈&#x27;, logo: &#x27;logo-jb&#x27;, rate: &#x27;월 186,700원&#x27; },
-        { name: &#x27;ORIX&#x27;, logo: &#x27;logo-orix&#x27;, rate: &#x27;월 189,400원&#x27; },
-        { name: &#x27;하나캐피탈&#x27;, logo: &#x27;logo-hana&#x27;, rate: &#x27;월 185,600원&#x27; },
-        { name: &#x27;SK렌터카&#x27;, logo: &#x27;logo-sk&#x27;, rate: &#x27;월 188,200원&#x27; },
-        { name: &#x27;삼성카드&#x27;, logo: &#x27;logo-samsung&#x27;, rate: &#x27;월 186,100원&#x27; },
-        { name: &#x27;신한카드&#x27;, logo: &#x27;logo-shinhan&#x27;, rate: &#x27;월 184,900원&#x27; },
-        { name: &#x27;redcap 렌터카&#x27;, logo: &#x27;logo-redcap&#x27;, rate: &#x27;월 190,300원&#x27; },
-        { name: &#x27;롯데캐피탈&#x27;, logo: &#x27;logo-lotte&#x27;, rate: &#x27;월 187,200원&#x27; },
-        { name: &#x27;메리츠캐피탈&#x27;, logo: &#x27;logo-meritz&#x27;, rate: &#x27;월 185,300원&#x27; },
-        { name: &#x27;하모니렌트카&#x27;, logo: &#x27;logo-harmony&#x27;, rate: &#x27;월 188,800원&#x27; }
+        { name: 'DGB캐피탈', logo: 'logo-dgb', rate: '월 187,900원' },
+        { name: 'JB우리캐피탈', logo: 'logo-jb', rate: '월 186,700원' },
+        { name: 'ORIX', logo: 'logo-orix', rate: '월 189,400원' },
+        { name: '하나캐피탈', logo: 'logo-hana', rate: '월 185,600원' },
+        { name: 'SK렌터카', logo: 'logo-sk', rate: '월 188,200원' },
+        { name: '삼성카드', logo: 'logo-samsung', rate: '월 186,100원' },
+        { name: '신한카드', logo: 'logo-shinhan', rate: '월 184,900원' },
+        { name: 'redcap 렌터카', logo: 'logo-redcap', rate: '월 190,300원' },
+        { name: '롯데캐피탈', logo: 'logo-lotte', rate: '월 187,200원' },
+        { name: '메리츠캐피탈', logo: 'logo-meritz', rate: '월 185,300원' },
+        { name: '하모니렌트카', logo: 'logo-harmony', rate: '월 188,800원' }
       ];
 
       let reelIndex = 0;
@@ -5330,8 +5636,8 @@
       const itemHeight = 66;
 
       function makeLogoCard(company) {
-        const card = document.createElement(&#x27;div&#x27;);
-        card.className = &#x27;rolling-logo-card&#x27;;
+        const card = document.createElement('div');
+        card.className = 'rolling-logo-card';
         card.innerHTML = `
           &lt;span class=&quot;finance-logo-sprite ${company.logo}&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
           &lt;span class=&quot;finance-card-name&quot;&gt;${company.name}&lt;/span&gt;
@@ -5342,7 +5648,7 @@
 
       function buildLogoReel() {
         if (!reel) return;
-        reel.innerHTML = &#x27;&#x27;;
+        reel.innerHTML = '';
         [...financeCompanies, ...financeCompanies].forEach(company =&gt; {
           reel.appendChild(makeLogoCard(company));
         });
@@ -5351,16 +5657,16 @@
 
       function updateReel(skipTransition) {
         if (!reel) return;
-        const cards = reel.querySelectorAll(&#x27;.rolling-logo-card&#x27;);
-        cards.forEach(card =&gt; card.classList.remove(&#x27;is-active&#x27;));
-        const active = cards[reelIndex + 1];
-        if (active) active.classList.add(&#x27;is-active&#x27;);
+        const cards = reel.querySelectorAll('.rolling-logo-card');
+        cards.forEach(card =&gt; card.classList.remove('is-active'));
+        const active = cards[reelIndex];
+        if (active) active.classList.add('is-active');
 
-        if (skipTransition) reel.style.transition = &#x27;none&#x27;;
+        if (skipTransition) reel.style.transition = 'none';
         reel.style.transform = `translateY(${-reelIndex * itemHeight}px)`;
         if (skipTransition) {
           void reel.offsetHeight;
-          reel.style.transition = &#x27;&#x27;;
+          reel.style.transition = '';
         }
 
         const company = financeCompanies[reelIndex % financeCompanies.length];
@@ -5379,21 +5685,21 @@
       }
 
       function flashResult() {
-        const finalResult = document.querySelector(&#x27;.finance-row.is-lowest&#x27;);
+        const finalResult = document.querySelector('.finance-row.is-lowest');
         if (finalResult) {
-          finalResult.classList.remove(&#x27;price-flash&#x27;);
+          finalResult.classList.remove('price-flash');
           void finalResult.offsetWidth;
-          finalResult.classList.add(&#x27;price-flash&#x27;);
+          finalResult.classList.add('price-flash');
         }
 
         const highestPrice = 205800 + ((Math.floor(Math.random() * 4) + 1) * 500);
-        const currentLow = parseInt(finalPriceText.textContent.replace(/[^0-9]/g, &#x27;&#x27;)) || 183137;
+        const currentLow = parseInt(finalPriceText.textContent.replace(/[^0-9]/g, '')) || 183137;
         const diff = highestPrice - currentLow;
 
-        if (savingEl) savingEl.textContent = diff.toLocaleString(&#x27;ko-KR&#x27;) + &#x27;원/월&#x27;;
+        if (savingEl) savingEl.textContent = diff.toLocaleString('ko-KR') + '원/월';
         if (totalEl) {
           const total = Math.round(diff * 36 / 10000);
-          totalEl.textContent = &#x27;약 &#x27; + total + &#x27;만원&#x27;;
+          totalEl.textContent = '약 ' + total + '만원';
         }
       }
 
@@ -5406,7 +5712,7 @@
           ticks += 1;
           if (ticks &gt;= 14) {
             clearInterval(reelTimer);
-            if (pickerState) pickerState.textContent = &#x27;카빌리지 최적 조건 선택 완료&#x27;;
+            if (pickerState) pickerState.textContent = '카빌리지 최적 조건 선택 완료';
             setTimeout(flashResult, 260);
             setTimeout(() =&gt; {
               reelTimer = setInterval(advanceReel, 1450);
@@ -5420,12 +5726,12 @@
       setTimeout(runScanningMotion, 450);
 
       if (refreshBtn) {
-        refreshBtn.addEventListener(&#x27;click&#x27;, function() {
-          this.classList.add(&#x27;spinning&#x27;);
-          setTimeout(() =&gt; this.classList.remove(&#x27;spinning&#x27;), 650);
+        refreshBtn.addEventListener('click', function() {
+          this.classList.add('spinning');
+          setTimeout(() =&gt; this.classList.remove('spinning'), 650);
           runScanningMotion();
           secondsSinceUpdate = 0;
-          if (lastUpdateEl) lastUpdateEl.textContent = &#x27;방금&#x27;;
+          if (lastUpdateEl) lastUpdateEl.textContent = '방금';
         });
       }
     })();
@@ -5445,15 +5751,14 @@
 
   &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;"></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <script>
+&lt;/html&gt;" title="모바일 버전 미리보기"></iframe>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<script>
     (() => {
       const tabs = Array.from(document.querySelectorAll('.preview-tab'));
       const panels = Array.from(document.querySelectorAll('.preview-panel'));
